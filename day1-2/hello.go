@@ -10,6 +10,7 @@ var name string
 
 //var name = flag.String("name","everyone","The greeting object")
 var cmdLine = flag.NewFlagSet("question", flag.ExitOnError)
+
 func init() {
 	//flag.CommandLine = flag.NewFlagSet("", flag.ExitOnError)
 	////flag.CommandLine = flag.NewFlagSet("", flag.PanicOnError)

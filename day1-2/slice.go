@@ -95,26 +95,25 @@ func main() {
 	//fmt.Printf("%p\n cap:%d  len:%d\n", m, cap(m), len(m))
 	//fmt.Println(m)
 
-	a:=[...]int{1}
-	b:=a[:]
-	fmt.Printf("%p\n",&a)
-	fmt.Printf("%p\n",b)
+	a := [...]int{1}
+	b := a[:]
+	fmt.Printf("%p\n", &a)
+	fmt.Printf("%p\n", b)
 	b[0] = 100
-	fmt.Println(a,b)
+	fmt.Println(a, b)
 	//扩容策略
-	fmt.Println("b的容量：",cap(b))
+	fmt.Println("b的容量：", cap(b))
 	b = append(b, 3, 4, 5, 6, 7, 8)
 	fmt.Println("b的容量：", cap(b))
 	b = append(b, 8)
 	fmt.Println("b的容量：", cap(b))
 
 	var s1 []int64
-	s1=append(s1,100)
+	s1 = append(s1, 100)
 	fmt.Println(s1)
-	s1 = make([]int64,3)
+	s1 = make([]int64, 3)
 	fmt.Println(s1, len(s1), cap(s1))
-	s2:=make([]string,3,10)
+	s2 := make([]string, 3, 10)
 	fmt.Println(s2, len(s2), cap(s2))
-
 
 }

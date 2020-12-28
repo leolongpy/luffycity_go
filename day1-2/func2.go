@@ -18,11 +18,11 @@ func main() {
 	ret := calc(100, 200, add1)
 	fmt.Println(ret)
 
-	ret =calc(100,200,sub)
+	ret = calc(100, 200, sub)
 	fmt.Println(ret)
 	//匿名函数
 
-	func(){
-	fmt.Println("hello world")
+	func() {
+		fmt.Println("hello world")
 	}()
 }

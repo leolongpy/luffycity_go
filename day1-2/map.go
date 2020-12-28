@@ -45,16 +45,16 @@ func main() {
 		"wangxin":  200,
 		"qiaojing": 180,
 	}
-	var keys = make([]string,0,10)
-	for key:=range m3{
-		keys = append(keys,key)
+	var keys = make([]string, 0, 10)
+	for key := range m3 {
+		keys = append(keys, key)
 	}
 	fmt.Println(keys)
 	//排序
 	sort.Strings(keys)
 	fmt.Println(keys)
 
-	for _,key:=range keys{
-		fmt.Println(key,m3[key])
+	for _, key := range keys {
+		fmt.Println(key, m3[key])
 	}
 }

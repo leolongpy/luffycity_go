@@ -23,7 +23,7 @@ func main() {
 			}
 		}
 		if flag {
-			fmt.Printf("%d是素数\t",i)
+			fmt.Printf("%d是素数\t", i)
 		}
 	}
 

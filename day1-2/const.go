@@ -33,7 +33,7 @@ const (
 	e, f = iota + 1, iota + 2
 )
 
-func main()  {
+func main() {
 	fmt.Println(pi)
-	fmt.Println(a,b,c,d,e,f)
+	fmt.Println(a, b, c, d, e, f)
 }

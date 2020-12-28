@@ -9,6 +9,6 @@ func teseDefer() {
 	fmt.Println("函数马上要结束了")
 }
 
-func main()  {
+func main() {
 	teseDefer()
 }

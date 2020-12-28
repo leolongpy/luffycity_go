@@ -49,10 +49,9 @@ func main() {
 		{3, 4},
 		{5, 6},
 	}
-	d:=c
-	d[0][0]=100
+	d := c
+	d[0][0] = 100
 	fmt.Println(c)
 	fmt.Println(d)
-
 
 }
