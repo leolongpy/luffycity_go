@@ -1,3 +1,3 @@
-module luffycity.com
+module luffycity_go
 
 go 1.15
