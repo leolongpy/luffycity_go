@@ -32,8 +32,8 @@ func printMethod(x interface{}) {
 		fmt.Printf("methon name:%s\n", t.Method(i).Name)
 		fmt.Printf("methon:%s\n", methodType)
 		// 通过反射调用方法传递的参数必须是 []reflect.Value 类型
-		var args = []reflect.Value{}
-		v.Method(i).Call(args)
+		//var args = []reflect.Value{}
+		//v.Method(i).Call(args)
 	}
 }
 func main() {
