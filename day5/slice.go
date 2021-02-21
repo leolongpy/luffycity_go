@@ -2,23 +2,25 @@ package main
 
 import "fmt"
 
+type Person struct {
+	name string
+	sex string
+	age int
+}
+
+type Student1 struct {
+	Person
+	id int
+	addr string
+}
 func main() {
-	m1 := map[int]string{1: "zs", 2: "ls"}
-	m1[1] = "ww"
-	m1[3] = "zhaosi"
-	fmt.Println(m1)
-	//遍历
-	for k, v := range m1 {
-		fmt.Printf("%d----->%s\n", k, v)
-	}
+	s1:=Student1{Person{"zs","female",20},1,"bj"}
+	fmt.Println(s1)
 
-	for k := range m1 {
-		fmt.Printf("%d---->%s\n", k, m1[k])
-	}
+	s2:=Student1{Person:Person{"zs","female",20}}
+	fmt.Println(s2)
 
-	value,ok :=m1[5]
-	fmt.Println("value=",value,",ok=",ok)
+	s3:=Student1{Person:Person{name: "zs"}}
+	fmt.Println(s3)
 
-	delete(m1,1)
-	fmt.Println(m1)
 }
