@@ -18,5 +18,6 @@ func main() {
 		fmt.Println("子协程2")
 		wg.Done()
 	}()
+	
 	wg.Wait()
 }
