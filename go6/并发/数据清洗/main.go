@@ -2,9 +2,12 @@ package main
 
 import (
 	"bufio"
-	"github.com/axgle/mahonia"
+	"fmt"
 	"io"
 	"os"
+	"github.com/axgle/mahonia"
+	"strings"
+
 )
 
 // 处理乱码
@@ -33,6 +36,17 @@ func main() {
 		lineBytes, _, err := reader.ReadLine()
 		if err == io.EOF {
 			break
+		}
+		gbkStr:=string(lineBytes)
+		lineStr:=ConvertEncoding(gbkStr,"GBK")
+		//取身份证
+		fields := strings.Split(lineStr,",")
+		if len(fields)>=2 && len(fields[1])==18{
+			goodFile.WriteString(lineStr+"\n")
+			fmt.Println("Good:",lineStr)
+		}else{
+			badFile.WriteString(lineStr+"\n")
+			fmt.Println("Bad:",lineStr)
 		}
 
 	}
