@@ -34,19 +34,20 @@ func read() {
 		fmt.Println(newStr)
 	}
 }
+
 //缓冲读取
-func read2(){
-	file,_ := os.Open("D:/BaiduNetdiskDownload/go6期/kfang.txt")
+func read2() {
+	file, _ := os.Open("D:/BaiduNetdiskDownload/go6期/kfang.txt")
 	defer file.Close()
 	//建缓冲区
 	reader := bufio.NewReader(file)
-	for  {
-		lineBytes,_,err:=reader.ReadLine()
-		if err==io.EOF {
+	for {
+		lineBytes, _, err := reader.ReadLine()
+		if err == io.EOF {
 			break
 		}
 		gbkStr := string(lineBytes)
-		utfStr := ConvertEncoding(gbkStr,"GBK")
+		utfStr := ConvertEncoding(gbkStr, "GBK")
 		fmt.Println(utfStr)
 	}
 }
