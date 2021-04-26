@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-import m "luffycity.com/day4/math_pkg"
+import m "luffycity_go/day4/math_pkg"
 
 const Mode = 1
 

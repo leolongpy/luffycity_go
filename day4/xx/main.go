@@ -1,6 +1,6 @@
 package main
 
-import "luffycity.com/day4/mylog"
+import "luffycity_go/day4/mylog"
 
 func main() {
 	f1 := mylog.NewFileLogger(mylog.DEBUG, "./", "test.log")
