@@ -6,11 +6,10 @@ import (
 )
 
 func main() {
+	udp := "0.0.0.0:8888"
+	udpAddr, _ := net.ResolveUDPAddr("udp4", udp)
 	//UDP的服务监听
-	listen, err := net.ListenUDP("udp", &net.UDPAddr{
-		IP:   net.IPv4(127, 0, 0, 1),
-		Port: 8080,
-	})
+	listen, err := net.ListenUDP("udp", udpAddr)
 	if err != nil {
 		fmt.Println(err)
 	}

@@ -1,0 +1,8 @@
+yaml_name: 李师师
+yaml_age: 90
+yaml_rich: false
+http:
+  ips:
+    - 1.1
+    - 2.2
+  port: 88

@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+option go_package = "./;proto";
+
+message SimpleReq{
+  string data = 1;
+}
+
+message SimpleRsp{
+  int32 code = 1;
+  string value = 2;
+}
+
+service Simple{
+  rpc Route (SimpleReq) returns(SimpleRsp){}
+}

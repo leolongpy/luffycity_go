@@ -21,13 +21,13 @@ func ConvertEncoding(srcStr string, encoding string) (dstStr string) {
 }
 func main() {
 	//打开文件
-	file, _ := os.Open("D:/BaiduNetdiskDownload/go6期/kfang.txt")
+	file, _ := os.Open("E:/Desktop/kfang.txt")
 	defer file.Close()
 	//创建优质文件
-	goodFile, _ := os.OpenFile("D:/BaiduNetdiskDownload/go6期/kfang_good.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	goodFile, _ := os.OpenFile("E:/Desktop/kfang_good.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	defer goodFile.Close()
 
-	badFile, _ := os.OpenFile("D:/BaiduNetdiskDownload/go6期/kfang_bad.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+	badFile, _ := os.OpenFile("E:/Desktop/kfang_bad.txt", os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
 	defer badFile.Close()
 
 	reader := bufio.NewReader(file)

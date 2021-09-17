@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "./;proto";
+
+message InfoRequest{
+  string username = 1;
+}
+
+message InfoResponse{
+  string msg = 1;
+}
+
+service Hello{
+  rpc Info (InfoRequest) returns (InfoResponse){}
+}

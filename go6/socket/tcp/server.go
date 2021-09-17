@@ -7,8 +7,10 @@ import (
 )
 
 func main() {
+	tcp := "0.0.0.0:8888"
+	tcpAddr, _ := net.ResolveTCPAddr("tcp4", tcp)
 	//创建tcp服务端监听
-	listenner, err := net.Listen("tcp", "0.0.0.0:8888")
+	listenner, err := net.ListenTCP("tcp", tcpAddr)
 	if err != nil {
 		fmt.Println(err)
 		return

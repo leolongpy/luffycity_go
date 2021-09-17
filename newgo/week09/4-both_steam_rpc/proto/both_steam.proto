@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option go_package = "./;proto";
+
+message StreamReq{
+  string question = 1;
+}
+
+message StreamRsp{
+  string answer = 1;
+}
+
+service Stream{
+  rpc Conversations(stream StreamReq) returns (stream StreamRsp){}
+}
