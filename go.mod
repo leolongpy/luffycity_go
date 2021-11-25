@@ -11,6 +11,7 @@ require (
 	github.com/go-redis/redis v6.15.9+incompatible
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/grpc-ecosystem/grpc-gateway v1.16.0 // indirect
+	github.com/grpc-ecosystem/grpc-gateway/v2 v2.7.0
 	github.com/hpcloud/tail v1.0.0
 	github.com/jmoiron/sqlx v1.3.4
 	github.com/micro/go-plugins/registry/etcd v0.0.0-20200119172437-4fe21aa238fd
@@ -24,8 +25,9 @@ require (
 	golang.org/x/net v0.0.0-20210908191846-a5e095526f91
 	golang.org/x/sys v0.0.0-20210909193231-528a39cd75f3 // indirect
 	golang.org/x/text v0.3.7 // indirect
-	google.golang.org/genproto v0.0.0-20210909211513-a8c4777a87af // indirect
-	google.golang.org/grpc v1.40.0
+	golang.org/x/tools v0.1.5 // indirect
+	google.golang.org/grpc v1.42.0
+	google.golang.org/grpc/cmd/protoc-gen-go-grpc v1.1.0
 	google.golang.org/protobuf v1.27.1
 	gopkg.in/yaml.v2 v2.4.0
 	sigs.k8s.io/yaml v1.2.0 // indirect
@@ -34,5 +36,5 @@ require (
 replace (
 	github.com/coreos/bbolt v1.3.4 => go.etcd.io/bbolt v1.3.4
 	github.com/micro/go-micro => github.com/Lofanmi/go-micro v1.16.1-0.20210804063523-68bbf601cfa4
-	google.golang.org/grpc => google.golang.org/grpc v1.26.0
+	//google.golang.org/grpc => google.golang.org/grpc v1.26.0
 )

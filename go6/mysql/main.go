@@ -54,7 +54,7 @@ func init() {
 	}
 	//连接数据库
 	var err error
-	db, err = sqlx.Open("mysql", "root:root@tcp(127.0.0.1:3306)/thinkcmf")
+	db, err = sqlx.Open("mysql", "root:root@tcp(192.168.147.129:3306)/test")
 	HandleError(err, "sql open")
 	defer db.Close()
 	fmt.Println("数据库已连接")
@@ -148,7 +148,7 @@ func UpdateCache(cacheMap *map[string]QueryResult) (delKey string) {
 	return delKey
 }
 func main() {
-	db, err := sqlx.Open("mysql", "root:root@tcp(127.0.0.1:3306)/thinkcmf")
+	db, err := sqlx.Open("mysql", "root:root@tcp(192.168.147.131:3306)/test")
 	HandleError(err, "sql open")
 	defer db.Close()
 	kfMap := make(map[string]QueryResult, 0)

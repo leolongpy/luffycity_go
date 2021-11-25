@@ -2,7 +2,7 @@ syntax = "proto3";
 package simple;
 option go_package = "./;proto";
 
-
+import  "google/api/annotations.proto";
 
 message SimpleReq{
   string data = 1;
@@ -15,5 +15,9 @@ message SimpleRsp{
 
 service Simple{
   rpc Route (SimpleReq) returns(SimpleRsp){
+    option (google.api.http) = {
+      post: "/v1/simple/route"
+      body: "*"
+    };
   }
 }
