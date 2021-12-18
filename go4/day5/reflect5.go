@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-// 反射得到结构体方法
+// Students 反射得到结构体方法
 type Students struct {
 	name  string
 	score int

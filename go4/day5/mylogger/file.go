@@ -9,7 +9,7 @@ import (
 
 // 这是往文件里面写日志的代码
 
-//文件日志结构体
+// FileLogger 文件日志结构体
 type FileLogger struct {
 	level    Level
 	fileName string
@@ -19,7 +19,7 @@ type FileLogger struct {
 	maxSize  int64
 }
 
-//  文件日志结构体的构造函数
+// NewFileLogger 文件日志结构体的构造函数
 func NewFileLogger(levelStr, fileName, filePath string) *FileLogger {
 	logLevel := paresLogLevel(levelStr)
 	fl := &FileLogger{
@@ -121,7 +121,7 @@ func (f *FileLogger) Fatal(format string, args ...interface{}) {
 	f.log(FatalLevel, format, args...)
 }
 
-//关闭日志文件句柄
+// Close 关闭日志文件句柄
 func (f *FileLogger) Close() {
 	f.file.Close()
 	f.errFile.Close()

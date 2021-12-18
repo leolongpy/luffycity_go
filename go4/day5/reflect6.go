@@ -9,8 +9,8 @@ import (
 	"strings"
 )
 
-//解析日志库的配置文件
-// Config 是一个日志配置项，字段名大写
+
+// Config 解析日志库的配置文件 是一个日志配置项，字段名大写
 type Config struct {
 	FilePath string `conf:"file_path" db:"name"`
 	FileName string `conf:"file_name"`

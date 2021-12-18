@@ -2,7 +2,7 @@ package mylogger
 
 import "strings"
 
-// 自定义类型 日志级别
+// Level 自定义类型 日志级别
 type Level uint16
 
 // 定义具体的日志级别常量
@@ -14,7 +14,7 @@ const (
 	FatalLevel
 )
 
-//定义一个logger接口
+// Logger 定义一个logger接口
 type Logger interface {
 	Debug(format string, args ...interface{})
 	Info(format string, args ...interface{})

@@ -93,6 +93,7 @@ func showBooks() {
 		fmt.Printf("《%s》 作者：%s 价格：%.2f 是否上架销售：%t\n", b.title, b.author, b.price, b.publish)
 	}
 }
+
 func main() {
 	for {
 		showMenu()
@@ -110,3 +111,5 @@ func main() {
 		}
 	}
 }
+
+
